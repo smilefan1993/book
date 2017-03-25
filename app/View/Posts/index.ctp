@@ -1,6 +1,20 @@
 <!-- File: /app/View/Posts/index.ctp -->
 
 
+<h1>Add new post</h1>
+<?php
+echo $this->Form->create('Post');
+echo $this->Form->input('user_name');
+echo $this->Form->input('Email', array(
+                        'label'=>'eMail',
+                        'type'=>'email'));
+echo $this->Form->input('Homepage');
+echo $this->Form->input('user_text', array(
+                        'label' => 'text',
+                        'rows' => '5'));
+echo $this->Form->end('Save Post');
+?>
+
     <!-- Here is where we loop through our $posts array, printing out post info -->
     <div class="row">
     <?php foreach ($posts as $post): ?>
