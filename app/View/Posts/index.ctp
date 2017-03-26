@@ -31,6 +31,14 @@ echo $this->Form->end('Save Post');
                 <div class="panel-body">
                     <?php echo $post['Post']['user_text']; ?>
                 </div>
+                 <div class="panel-footer clearfix">
+                    <div class="pull-right">
+                        <?php echo $post['Post']['created']; ?>
+                    </div>
+                    <div class="pull-left">
+                        <?php echo $post['Post']['Email']; ?>
+                    </div>
+                 </div>
             </div>
         </div>
     <?php endforeach; ?>
