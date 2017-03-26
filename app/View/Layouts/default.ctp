@@ -35,10 +35,11 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo $this->fetch('script');
 	?>
 	 <!-- Bootstrap core CSS -->
-        <link href="../../app/webroot/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/app/webroot/css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Custom styles for this template -->
-        <link href="../../app/webroot/css/starter-template.css" rel="stylesheet">
+        <link href="/app/webroot/css/starter-template.css" rel="stylesheet">
+        <link href="/app/webroot/css/index.css" rel="stylesheet">
 
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->

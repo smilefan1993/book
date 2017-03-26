@@ -1,0 +1,13 @@
+.pagination .current,
+.pagination .disabled  {
+    float: left;
+    padding: 0 14px;
+
+    color: #999;
+    cursor: default;
+    line-height: 34px;
+    text-decoration: none;
+
+    border: 1px solid #DDD;
+    border-left-width: 0;
+}

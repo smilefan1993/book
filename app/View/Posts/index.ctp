@@ -13,9 +13,13 @@ echo $this->Form->input('user_text', array(
                         'label' => 'text',
                         'rows' => '5'));
 echo $this->Form->end('Save Post');
-?>
 
-    <!-- Here is where we loop through our $posts array, printing out post info -->
+    echo '<div class="btn btn-default">'.$this->Paginator->sort('created','created').'</div>';
+    echo '<div class="btn btn-default">'.$this->Paginator->sort('user_name','name').'</div>';
+    echo '<div class="btn btn-default">'.$this->Paginator->sort('Email','email').'</div>';
+
+
+?>
     <div class="row">
     <?php foreach ($posts as $post): ?>
 
@@ -31,4 +35,14 @@ echo $this->Form->end('Save Post');
         </div>
     <?php endforeach; ?>
     <?php unset($post); ?>
-    </div>
+</div>
+<?php echo $this->Paginator->numbers(array(
+          'before' => '<ul class="pagination">',
+          'separator' => '',
+          'currentClass' => 'disabled',
+          'tag' => 'li',
+          'after' => '</ul>'
+      ));
+
+?>
+

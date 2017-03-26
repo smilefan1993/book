@@ -4,6 +4,7 @@ class PostsController extends AppController {
     public $helpers = array('Html', 'Form');
     public $components = array('Flash');
 
+
     public function index() {
         if ($this->request->is('post')) {
             $this->Post->create();
@@ -15,6 +16,13 @@ class PostsController extends AppController {
             }
             $this->Flash->error(__('Unable to add your post.'));
         }
-        $this->set('posts', $this->Post->find('all'));
+        $this->paginate = array(
+            'limit' => 25,
+            'order' => array(
+                'Post.created' => 'asc'
+            )
+        );
+        $posts = $this->paginate('Post');
+        $this->set('posts', $posts);
     }
 }
