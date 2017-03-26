@@ -110,3 +110,7 @@ CakeLog::config('error', array(
 	'file' => 'error',
 ));
 CakePlugin::load('DebugKit');
+CakePlugin::load('HtmlPurifier', array('bootstrap' => true));
+
+$config = HTMLPurifier_Config::createDefault();
+Purifier::config('ConfigName', $config);

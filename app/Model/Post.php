@@ -23,7 +23,14 @@ class Post extends AppModel {
             )
         ),
         'user_text' => array(
-            'rule' => 'notBlank'
+            'rule-1' => array(
+                'rule' => '/<(.|\n)*?>/',
+                'message' => 'Html tags are not allowed in that field'
+            ),
+            'rule-2' => array(
+                'rule' => 'notBlank',
+                'message' => 'field should be not empty'
+            )
         ),
         'Homepage' => array(
             'rule' => 'url',
